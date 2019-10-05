@@ -1,0 +1,5 @@
+package com.agendamento.repository;
+
+public interface ReservaRepository {
+
+}

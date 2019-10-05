@@ -1,0 +1,50 @@
+package com.agendamento.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.agendamento.models.Usuario;
+import com.agendamento.repository.UsuarioRepository;
+
+@Service
+public class UsuarioService {
+	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+
+	public void salvar(Usuario usuario) {
+		usuarioRepository.save(usuario);
+	}
+
+	public Iterable<Usuario> mostrarTodos(){
+		return usuarioRepository.findAll();
+	}
+
+	public Usuario pegarPorID( int id ) {
+		return usuarioRepository.findById(id).get();
+
+	}
+
+	public void deletar(int id) {
+		usuarioRepository.deleteById(id);
+	}
+
+	public void atualizar(Usuario usuario, int id) {
+		usuario.setId(id);
+		usuarioRepository.save(usuario);
+	}
+
+	public long quantidadeUsuario() {
+		 return usuarioRepository.count();
+	}
+
+
+	public void salvarUsuario(Usuario usuario, Login login ) {
+		usuario.
+	}
+
+
+
+
+
+}

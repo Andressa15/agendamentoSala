@@ -1,0 +1,9 @@
+package com.agendamento.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.agendamento.models.Login;
+
+public interface LoginRepository  extends CrudRepository<Login , Integer> {
+
+}

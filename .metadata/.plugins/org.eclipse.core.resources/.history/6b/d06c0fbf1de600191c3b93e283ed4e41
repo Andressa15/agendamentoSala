@@ -1,0 +1,5 @@
+package com.agendamento.models;
+
+public class Login {
+
+}

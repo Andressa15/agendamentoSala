@@ -1,0 +1,5 @@
+package com.agendamento.services;
+
+public class LoginSerive {
+
+}

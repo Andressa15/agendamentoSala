@@ -1,0 +1,5 @@
+package com.agendamento.config;
+
+public class Java8DateTimeConfiguration {
+
+}

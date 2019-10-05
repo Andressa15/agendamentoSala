@@ -1,0 +1,21 @@
+package com.agendamento.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.agendamento.models.Login;
+import com.agendamento.models.Usuario;
+import com.agendamento.repository.LoginRepository;
+@Service
+public class LoginSerive {
+
+	@Autowired
+
+	private LoginRepository loginRepository;
+
+	public String cadastrarLogin(Usuario user, Login login) {
+		login.setUsuario(user);
+		loginRepository.save(login);
+		return "Login cadastrado";
+	}
+}
